@@ -1,0 +1,69 @@
+---
+来源： https://developer.apple.com/documentation/SwiftUI/ButtonBorderShape/roundedRectangle(radius:)
+抓取时间：2025-12-01T10:28:29Z
+---
+
+# roundedRectangle(radius:)
+
+**类型方法**
+
+圆角矩形。
+
+## 声明
+
+```swift
+static func roundedRectangle(radius: CGFloat) -> ButtonBorderShape
+```
+
+## 参数
+
+- **radius**：矩形的边角半径。
+
+## 讨论
+
+使用 [buttonBorderShape(_:)](../View/buttonBorderShape.zh-Hans.md) 视图修改器可将形状应用于视图层次结构中的有边框按钮。
+
+
+
+## 获取边框形状
+
+- **automatic**：一种形状，由系统根据给定的上下文和平台确定合适的形状。
+- **capsule**：胶囊形状。
+- **circle**：圆形。
+- **roundedRectangle**：圆形：圆角矩形。
+
+
+---
+source: https://developer.apple.com/documentation/SwiftUI/ButtonBorderShape/roundedRectangle(radius:)
+crawled: 2025-12-01T10:28:29Z
+---
+
+# roundedRectangle(radius:)
+
+**Type Method**
+
+A rounded rectangle shape.
+
+## Declaration
+
+```swift
+static func roundedRectangle(radius: CGFloat) -> ButtonBorderShape
+```
+
+## Parameters
+
+- **radius**: The corner radius of the rectangle.
+
+## Discussion
+
+Use the [buttonBorderShape(_:)](../View/buttonBorderShape.zh-Hans.md) view modifier to apply the shape to bordered buttons within a view hierarchy.
+
+
+
+## Getting border shapes
+
+- **automatic**: A shape that defers to the system to determine an appropriate shape for the given context and platform.
+- **capsule**: A capsule shape.
+- **circle**: A circular shape.
+- **roundedRectangle**: A rounded rectangle shape.
+

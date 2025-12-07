@@ -1,0 +1,81 @@
+---
+来源： https://developer.apple.com/documentation/SwiftUI/LinearKeyframe
+抓取时间： 2025-12-02T17:33:58Z
+---
+
+# 线性关键帧
+
+**Structure**
+
+使用简单线性插值的关键帧。
+
+## 声明
+
+```swift
+struct LinearKeyframe<Value> where Value : Animatable
+```
+
+## 创建关键帧
+
+- **init(_:duration:timingCurve:)**：使用给定的值和时间戳创建新的关键帧。
+
+## 创建基于关键帧的动画
+
+- **keyframeAnimator(initialValue:repeating:content:keyframes:)**：连续循环给定的关键帧，使用在 `body` 中应用的修改器更新视图。
+- **keyframeAnimator(initialValue:trigger:content:keyframes:)**：当给定的触发器值发生变化时播放给定的关键帧，并使用在 `body` 中应用的修改器更新视图。
+- **KeyframeAnimator**：使用关键帧对其内容进行动画处理的容器。
+- **Keyframes**：定义值随时间变化的类型。
+- **KeyframeTimeline**：数值随时间变化的描述，使用关键帧建模。
+- **KeyframeTrack**：为根类型的单个属性制作动画的关键帧序列。
+- **KeyframeTrackContentBuilder**：根据您在闭包中定义的关键帧创建关键帧轨迹内容的构建器。
+- **KeyframesBuilder**：将关键帧内容值合并为单一值的构建器。
+- **KeyframeTrackContent**：定义动画值插值曲线的一组关键帧。
+- **CubicKeyframe**：使用立方曲线在数值之间平滑插值的关键帧。
+- **MoveKeyframe**：不进行插值，而是立即移动到给定值的关键帧。
+- **SpringKeyframe**：使用弹簧函数插值到给定值的关键帧。
+
+## 符合
+
+- 关键帧跟踪内容
+
+
+---
+source: https://developer.apple.com/documentation/SwiftUI/LinearKeyframe
+crawled: 2025-12-02T17:33:58Z
+---
+
+# LinearKeyframe
+
+**Structure**
+
+A keyframe that uses simple linear interpolation.
+
+## Declaration
+
+```swift
+struct LinearKeyframe<Value> where Value : Animatable
+```
+
+## Creating the keyframe
+
+- **init(_:duration:timingCurve:)**: Creates a new keyframe using the given value and timestamp.
+
+## Creating keyframe-based animation
+
+- **keyframeAnimator(initialValue:repeating:content:keyframes:)**: Loops the given keyframes continuously, updating the view using the modifiers you apply in `body`.
+- **keyframeAnimator(initialValue:trigger:content:keyframes:)**: Plays the given keyframes when the given trigger value changes, updating the view using the modifiers you apply in `body`.
+- **KeyframeAnimator**: A container that animates its content with keyframes.
+- **Keyframes**: A type that defines changes to a value over time.
+- **KeyframeTimeline**: A description of how a value changes over time, modeled using keyframes.
+- **KeyframeTrack**: A sequence of keyframes animating a single property of a root type.
+- **KeyframeTrackContentBuilder**: The builder that creates keyframe track content from the keyframes that you define within a closure.
+- **KeyframesBuilder**: A builder that combines keyframe content values into a single value.
+- **KeyframeTrackContent**: A group of keyframes that define an interpolation curve of an animatable value.
+- **CubicKeyframe**: A keyframe that uses a cubic curve to smoothly interpolate between values.
+- **MoveKeyframe**: A keyframe that immediately moves to the given value without interpolating.
+- **SpringKeyframe**: A keyframe that uses a spring function to interpolate to the given value.
+
+## Conforms To
+
+- KeyframeTrackContent
+

@@ -1,0 +1,85 @@
+---
+来源：https://developer.apple.com/documentation/SwiftUI/Path/lineSubtraction(_:eoFill:)
+抓取时间： 2025-12-02T21:42:39Z
+---
+
+# lineSubtraction(_:eoFill:)
+
+**实例方法**
+
+返回一条新路径，该路径中的一条线不会与给定路径的填充区域重叠。
+
+## 声明
+
+```swift
+func lineSubtraction(_ other: Path, eoFill: Bool = false) -> Path
+```
+
+## 参数
+
+- **other**：要减去的路径。
+- **eoFill**：是否使用偶数规则（如果为 true）或非零规则（如果为 false）来决定将哪些区域作为路径的内部区域。
+
+## 返回值
+
+一条新路径。
+
+## 讨论
+
+生成路径的直线就是这条路径中没有与`other`的填充区域重叠的直线。
+
+被剪切的相交子路径会创建开放子路径。未与`other` 相交的封闭子路径保持封闭。
+
+## 对路径执行操作
+
+- **addRoundedRect(in:cornerSize:style:transform:)**：为路径添加一个圆角矩形。
+- **intersection(_:eoFill:)**：返回一条新路径，其中包含两条路径共有的填充区域。
+- **lineIntersection(_:eoFill:)**：返回一条新路径，该路径的一条直线与给定路径的填充区域重叠。
+- **normalized(eoFill:)**：返回此路径的一个新的弱简单副本。
+- **subtracting(_:eoFill:)**：返回一条新路径，其中包含此路径中已填充但未在给定路径中的区域。
+- **symmetricDifference(_:eoFill:)**：返回一条新路径，其中的填充区域要么来自此路径，要么来自给定路径，但不会同时来自这两条路径。
+- **union(_:eoFill:)**：返回一条新路径，该路径或给定路径中都有填充区域。
+
+
+---
+source: https://developer.apple.com/documentation/SwiftUI/Path/lineSubtraction(_:eoFill:)
+crawled: 2025-12-02T21:42:39Z
+---
+
+# lineSubtraction(_:eoFill:)
+
+**Instance Method**
+
+Returns a new path with a line from this path that does not overlap the filled region of the given path.
+
+## Declaration
+
+```swift
+func lineSubtraction(_ other: Path, eoFill: Bool = false) -> Path
+```
+
+## Parameters
+
+- **other**: The path to subtract.
+- **eoFill**: Whether to use the even-odd rule for determining which areas to treat as the interior of the paths (if true), or the non-zero rule (if false).
+
+## Return Value
+
+A new path.
+
+## Discussion
+
+The line of the resulting path is the line of this path that does not overlap the filled region of `other`.
+
+Intersected subpaths that are clipped create open subpaths. Closed subpaths that do not intersect `other` remain closed.
+
+## Performing operations on the path
+
+- **addRoundedRect(in:cornerSize:style:transform:)**: Adds a rounded rectangle to the path.
+- **intersection(_:eoFill:)**: Returns a new path with filled regions common to both paths.
+- **lineIntersection(_:eoFill:)**: Returns a new path with a line from this path that overlaps the filled regions of the given path.
+- **normalized(eoFill:)**: Returns a new weakly-simple copy of this path.
+- **subtracting(_:eoFill:)**: Returns a new path with filled regions from this path that are not in the given path.
+- **symmetricDifference(_:eoFill:)**: Returns a new path with filled regions either from this path or the given path, but not in both.
+- **union(_:eoFill:)**: Returns a new path with filled regions in either this path or the given path.
+
